@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ~ Copyright (c) 2019. CK. All rights reserved.
+  -->
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.github.fartherp.demo.dao.UserMapper">
+
+    <select id="findByUsername" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from `tb_user`
+        where `user_name` = #{userName,jdbcType=VARCHAR}
+    </select>
+</mapper>

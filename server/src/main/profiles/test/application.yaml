@@ -1,0 +1,49 @@
+env: false
+
+pagehelper:
+  reasonable: false
+  support-methods-arguments: true
+  page-size-zero: true
+  params: count=countSql
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+
+spring:
+  redis:
+    redisson:
+      config: classpath:redisson.yaml
+  jackson:
+      serialization:
+        write-dates-as-timestamps: true
+      default-property-inclusion: non_null
+  datasource:
+    url: jdbc:mysql://192.168.120.60:3306/newjump?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: newjump
+    password: newjump
+  transaction:
+    rollback-on-commit-failure: true
+
+log:
+  server:
+    path: ../logs/console
+
+logging:
+  level:
+    org:
+      springframework:
+        boot: info
+        web: info
+        jdbc: info
+        dao: info
+        transaction: info
+      mybatis: info
+    com:
+      github:
+        fartherp: info
+
+shiro:
+  annotations:
+    enabled: true
+  web:
+    enabled: true
