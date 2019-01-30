@@ -9,8 +9,7 @@ import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.font.FontProvider;
 import org.apache.commons.io.IOUtils;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
@@ -27,7 +26,6 @@ import java.util.List;
  */
 public class PDFTest {
     @Test
-    @DisplayName("😱")
     public void main() throws Exception {
         Resource[] resources = new PathMatchingResourcePatternResolver().getResources(FormatUtils.TEMPLATE_RESOURCE_PATH);
         String html = IOUtils.toString(resources[0].getInputStream(), Charset.forName("GBK"));

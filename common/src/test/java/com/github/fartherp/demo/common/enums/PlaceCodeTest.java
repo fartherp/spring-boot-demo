@@ -4,7 +4,8 @@
 
 package com.github.fartherp.demo.common.enums;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 
 /**
  * Created by IntelliJ IDEA.
