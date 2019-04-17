@@ -20,7 +20,7 @@
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
     ]]>
   </insert>
-  <insert id="insertBatch" parameterType="java.util.List">
+  <insert id="insertBatch" parameterType="java.util.List"  useGeneratedKeys="true" keyProperty="id">
     insert into `tb_user` (`user_name`, `password`, `phone`, 
       `create_time`, `update_time`)
      values 
