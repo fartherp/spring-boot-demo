@@ -1,15 +1,2 @@
-clusterServersConfig:
-  nodeAddresses:
-    - redis://192.168.9.100:20006
-    - redis://192.168.9.100:20007
-    - redis://192.168.9.100:20008
-    - redis://192.168.9.100:20009
-    - redis://192.168.9.100:20010
-    - redis://192.168.9.100:20011
-  masterConnectionPoolSize: 500
-  slaveConnectionPoolSize: 500
-  idleConnectionTimeout: 10000
-  connectTimeout: 30000
-  timeout: 3000
-  pingTimeout: 30000
-  failedSlaveReconnectionInterval: 3000
+singleServerConfig:
+  address: redis://127.0.0.1:6379
