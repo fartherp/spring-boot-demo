@@ -5,17 +5,15 @@
 package com.github.fartherp.demo.pojo;
 
 import com.github.fartherp.framework.database.dao.FieldAccessVo;
-import com.github.fartherp.framework.database.dao.annotation.Id;
 import java.util.Date;
 
 /**
  * `user` 
  */
-public class UserBase extends FieldAccessVo {
+public class UserBase extends FieldAccessVo<Integer> {
     /**
      * id
      */
-    @Id
     private Integer id;
 
     /**
@@ -149,5 +147,10 @@ public class UserBase extends FieldAccessVo {
      */
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    @Override
+    public Integer primaryKey() {
+        return id;
     }
 }

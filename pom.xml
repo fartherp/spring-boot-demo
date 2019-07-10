@@ -33,11 +33,11 @@
     </properties>
     <repositories>
         <repository>
-            <id>aliyun</id>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <id>snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </repository>
         <repository>
-            <id>oss</id>
+            <id>releases</id>
             <url>https://oss.sonatype.org/content/repositories/releases/</url>
         </repository>
     </repositories>
@@ -59,7 +59,7 @@
             <dependency>
                 <groupId>com.github.fartherp.spring.boot</groupId>
                 <artifactId>framework-spring-boot-starter</artifactId>
-                <version>3.0.3</version>
+                <version>3.0.6-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>org.redisson</groupId>
