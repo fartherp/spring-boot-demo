@@ -1,7 +1,18 @@
-/*
- * Copyright (c) 2019. CK. All rights reserved.
+/**
+ *    Copyright (c) 2018-2019 CK.
+ *
+ *    Licensed under the Apache License, Version 2.0 (the "License");
+ *    you may not use this file except in compliance with the License.
+ *    You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the License for the specific language governing permissions and
+ *    limitations under the License.
  */
-
 package com.github.fartherp.demo.base;
 
 import com.github.fartherp.demo.common.base.JsonResp;
@@ -9,9 +20,7 @@ import com.github.fartherp.demo.common.enums.ErrorCodeEnum;
 import com.github.fartherp.demo.common.exception.AppException;
 import com.github.fartherp.demo.common.util.PropertyConfigurer;
 import com.github.fartherp.framework.exception.SystemException;
-import com.github.fartherp.demo.pojo.User;
 import org.apache.commons.collections4.CollectionUtils;
-import org.apache.shiro.SecurityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -20,12 +29,8 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerExceptionResolver;
-import org.springframework.web.servlet.HandlerInterceptor;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.Method;
@@ -33,14 +38,15 @@ import java.util.List;
 
 /**
  * Spring MVC 配置
- * Author:szuhcc@163.com
- * Date:2018/4/28
+ * @author CK
+ * @date 2018/4/28
  */
 public class WebMvcConfig implements WebMvcConfigurer {
 
     private static final Logger logger = LoggerFactory.getLogger(WebMvcConfig.class);
 
     //统一异常处理
+    @Override
     public void configureHandlerExceptionResolvers(List<HandlerExceptionResolver> exceptionResolvers) {
         exceptionResolvers.add((request, response, handler, e) -> {
             if (response.isCommitted()) {

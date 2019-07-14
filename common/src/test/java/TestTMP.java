@@ -1,15 +1,26 @@
-/*
- * Copyright (c) 2019. CK. All rights reserved.
+/**
+ *    Copyright (c) 2018-2019 CK.
+ *
+ *    Licensed under the Apache License, Version 2.0 (the "License");
+ *    you may not use this file except in compliance with the License.
+ *    You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the License for the specific language governing permissions and
+ *    limitations under the License.
  */
-
 import com.github.fartherp.framework.common.util.BigDecimalUtil;
 
 import java.math.BigDecimal;
 
 /**
  * Created by IntelliJ IDEA .
- * Auth: CK
- * Date: 2016/7/14
+ * @author CK
+ * @date 2016/7/14
  */
 public class TestTMP {
     public static BigDecimal hundred = new BigDecimal(100);
