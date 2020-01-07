@@ -98,7 +98,7 @@
             <dependency>
                 <groupId>com.github.fartherp.spring.boot</groupId>
                 <artifactId>shiro-redisson-spring-boot-starter</artifactId>
-                <version>1.0.7</version>
+                <version>1.0.8-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>mysql</groupId>

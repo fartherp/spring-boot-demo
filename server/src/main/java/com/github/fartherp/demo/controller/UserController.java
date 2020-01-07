@@ -21,7 +21,7 @@ import com.github.fartherp.demo.common.exception.AppException;
 import com.github.fartherp.demo.common.req.LoginReq;
 import com.github.fartherp.demo.common.req.RegisterReq;
 import com.github.fartherp.demo.manager.UserManager;
-import com.github.fartherp.demo.shiro.MD5Utils;
+import com.github.fartherp.demo.shiro.Md5Utils;
 import com.github.fartherp.demo.shiro.MySessionManager;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -53,7 +53,7 @@ public class UserController extends BasicsController {
 
     @PostMapping(value = "/register", produces = "application/json;charset=UTF-8")
     public JsonResp register(@Valid @RequestBody RegisterReq req) {
-        req.setPassword(MD5Utils.encrypt(req.getUserName(), req.getPassword()));
+        req.setPassword(Md5Utils.encrypt(req.getUserName(), req.getPassword()));
         userManager.register(req);
         return JsonResp.data();
     }
@@ -66,7 +66,7 @@ public class UserController extends BasicsController {
         try {
             subject.login(token);
 
-            Map<String, String> mapData = new HashMap<>();
+            Map<String, String> mapData = new HashMap<>(1);
             mapData.put(MySessionManager.AUTHORIZATION, subject.getSession().getId().toString());
             resp = JsonResp.data(mapData);
         } catch (IncorrectCredentialsException e) {

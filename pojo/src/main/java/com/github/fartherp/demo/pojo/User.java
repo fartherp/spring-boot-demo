@@ -15,9 +15,15 @@
  */
 package com.github.fartherp.demo.pojo;
 
+import com.github.fartherp.shiro.ShiroFieldAccess;
+
 /**
  * `user` 
  */
-public class User extends UserBase {
+public class User extends UserBase implements ShiroFieldAccess {
 
+    @Override
+    public String unique() {
+        return getId().toString();
+    }
 }

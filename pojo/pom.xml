@@ -66,5 +66,9 @@
             <artifactId>common</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.fartherp.spring.boot</groupId>
+            <artifactId>shiro-redisson-spring-boot-starter</artifactId>
+        </dependency>
     </dependencies>
 </project>

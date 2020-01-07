@@ -24,7 +24,7 @@ import org.apache.shiro.util.ByteSource;
  * @author CK
  * @date 2018/12/21
  */
-public class MD5Utils {
+public class Md5Utils {
     /**
      * md5加密工具
      */

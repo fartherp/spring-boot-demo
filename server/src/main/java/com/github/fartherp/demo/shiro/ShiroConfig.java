@@ -65,8 +65,7 @@ public class ShiroConfig {
 
     /**
      * 凭证匹配器
-     * （由于我们的密码校验交给Shiro的SimpleAuthenticationInfo进行处理了
-     * ）
+     * （由于我们的密码校验交给Shiro的SimpleAuthenticationInfo进行处理了）
      */
     @Bean
     public HashedCredentialsMatcher hashedCredentialsMatcher() {
